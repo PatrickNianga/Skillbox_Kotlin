@@ -1,1 +1,1 @@
-Intellij IDEA new project practice
+Intellij IDEA new project practic
