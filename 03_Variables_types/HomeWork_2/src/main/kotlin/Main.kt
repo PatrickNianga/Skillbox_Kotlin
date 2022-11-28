@@ -4,39 +4,36 @@ fun main() {
     val lastName = "Nianga Elenga"
 
     var height = 1.85
-    var weight = 100F
+    var weight = 100f
 
     var isChild = height < 1.5 || weight < 40
-    println("Возжно вы ребенок? - $isChild")
+    println("Возжно вы ребенок? - $isChild" + "\n")
 
     var info = """
-        $firstName
-        $lastName
-        $height
-        $weight
-        $isChild
+        Мои:
+        Имя - $firstName
+        Фамилия - $lastName
+        Рост - $height
+        Вес - $weight
+        Ребенок ли я? - $isChild
     """.trimIndent()
 
-    println(info)
+    println(info + "\n")
 
-    height = 1.6
+    height = 1.65
+    weight = 39F
+    isChild = height < 1.5 || weight < 40
 
     info = """
-        $firstName
-        $lastName
-        $height
-        $weight
-        $isChild
+        Мои:
+        Имя - $firstName
+        Фамилия - $lastName
+        Рост - $height
+        Вес - $weight
+        Ребенок ли я? - $isChild
     """.trimIndent()
 
     println(info)
-
-
-
-
-
-
-
 
 
 //    // Try adding program arguments via Run/Debug configuration.
