@@ -13,8 +13,8 @@ fun main() {
         Мои:
         Имя - $firstName
         Фамилия - $lastName
-        Рост - $height
-        Вес - $weight
+        Рост - $height м.
+        Вес - $weight кг.
         Ребенок ли я? - $isChild
     """.trimIndent()
 
@@ -28,8 +28,8 @@ fun main() {
         Мои:
         Имя - $firstName
         Фамилия - $lastName
-        Рост - $height
-        Вес - $weight
+        Рост - $height м.
+        Вес - $weight кг.
         Ребенок ли я? - $isChild
     """.trimIndent()
 
