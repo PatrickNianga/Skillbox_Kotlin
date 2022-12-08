@@ -1,7 +1,7 @@
 fun main() {
     val message = "F2p)v\"y233{0->c}ttelciFc"
-    val a = partTwo(message)
-    println(a)
+    val decodedMessage = partOne(message) + partTwo(message)
+    println(decodedMessage)
 }
 
 fun partOne(word: String): String {
