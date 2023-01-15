@@ -40,7 +40,7 @@ fun fibonacciNumberWhileLoop() {
         numberF2 = numberResult
         i -= 1
     }
-    println("Номер элемента ряда Фибоначчи: $numberF \nЗначение этого элемента равно: $numberF2")
+    println("Номер элемента ряда Фибоначчи: $numberF \n   Значение этого элемента равно: $numberF2")
 
 }
 
