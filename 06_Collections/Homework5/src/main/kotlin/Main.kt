@@ -5,10 +5,11 @@ fun main() {
 //    val numberN = readLine()
 //    val checkNumberN = {numberN:Int -> if (numberN <= 0 ) println("Введите число еще раз...") }
 
-
-checkNumberN()
+    checkNumberN()
+    userRegistration()
 
 }
+
 fun checkNumberN() {
     println("Введите число ... !")
     val numberN: Int = readLine()?.toIntOrNull() ?: return
@@ -28,3 +29,21 @@ fun checkNumberN() {
     println(mutableList.filter { it > 0 })
 
 }
+
+fun userRegistration() {
+
+    val usersTable = hashMapOf<String, Int>()
+    for (i in 1..2) {
+        println("Введите имя пользователя ${i}: ")
+        val userName = readLine()
+        println("Придумацте пароль для пользователя ${i}: ")
+        val userPasword:Int = readLine()?.toIntOrNull() ?: return
+        usersTable["${userName}"] = userPasword
+
+    }
+    println(usersTable)
+}
+
+
+
+
