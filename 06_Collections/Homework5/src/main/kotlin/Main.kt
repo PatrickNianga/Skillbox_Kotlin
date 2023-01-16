@@ -8,6 +8,7 @@ fun main() {
     checkNumberN()
     userRegistration()
 
+
 }
 
 fun checkNumberN() {
@@ -31,18 +32,52 @@ fun checkNumberN() {
 }
 
 fun userRegistration() {
+    println("Введите количество регистрируемых пользователей:")
+    val userScore = readLine()?.toIntOrNull() ?: return
+    val usersTable = hashMapOf<String, String>()
+    for (i in 1..userScore) {
+        println("Введите имя пользователя ${i}:")
+        var userName = readLine()
+        while (userName.isNullOrEmpty()) {
+            println("Вы не ввели имя пользователя! Попробуйте снова:")
+            userName = readLine()
+        }
 
-    val usersTable = hashMapOf<String, Int>()
-    for (i in 1..2) {
-        println("Введите имя пользователя ${i}: ")
-        val userName = readLine()
-        println("Придумацте пароль для пользователя ${i}: ")
-        val userPasword:Int = readLine()?.toIntOrNull() ?: return
-        usersTable["${userName}"] = userPasword
+        println("Придумайте пароль для пользователя ${i}: ")
+        var userPasword = readLine()
+        while (userPasword.isNullOrEmpty()) {
+            println("Вы не ввели пароль! Попробуйте снова:")
+            userPasword = readLine()
+        }
+        usersTable.put("${userName}", "${userPasword}")
+    }
+
+        println("Количество зарегистрированных пользователей ${userScore}")
+        println("Список зарегистрированных пользователей ${usersTable}")
+
+        println("Введите логин:")
+        val login = readLine()
+        val userlogin = usersTable.keys.contains(login)
+        while (!userlogin) {
+            println("Такого пользователя не существует. Введите логин еще раз:")
+            val login = readLine()
+            val userlogin = usersTable.keys.contains(login)
+            if (userlogin) break
+        }
+            println("введите пароль для ${login}:")
+            var pasword = readLine()
+            if (!usersTable.keys.contains(login) || !usersTable[login].equals(pasword))
+                println("Указан неверный логин или пароль».")
+            else
+                    println("Добро пожаловать ${login}")
 
     }
-    println(usersTable)
-}
+
+
+
+
+
+
 
 
 
