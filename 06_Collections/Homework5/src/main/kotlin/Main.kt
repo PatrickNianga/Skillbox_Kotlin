@@ -43,7 +43,7 @@ fun userRegistration() {
             userName = readLine()
         }
 
-        println("Придумайте пароль для пользователя ${i}: ")
+        println("Придумайте пароль для пользователя ${userName}: ")
         var userPasword = readLine()
         while (userPasword.isNullOrEmpty()) {
             println("Вы не ввели пароль! Попробуйте снова:")
@@ -64,15 +64,14 @@ fun userRegistration() {
             val userlogin = usersTable.keys.contains(login)
             if (userlogin) break
         }
-            println("введите пароль для ${login}:")
-            var pasword = readLine()
-            if (!usersTable.keys.contains(login) || !usersTable[login].equals(pasword))
+            println("введите пароль для :")
+            val pasword = readLine()
+            if (usersTable[login] != pasword)
                 println("Указан неверный логин или пароль».")
             else
                     println("Добро пожаловать ${login}")
 
     }
-
 
 
 
