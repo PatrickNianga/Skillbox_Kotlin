@@ -52,26 +52,27 @@ fun userRegistration() {
         usersTable.put("${userName}", "${userPasword}")
     }
 
-        println("Количество зарегистрированных пользователей ${userScore}")
-        println("Список зарегистрированных пользователей ${usersTable}")
+    println("Количество зарегистрированных пользователей ${userScore}")
+    println("Список зарегистрированных пользователей ${usersTable}")
 
-        println("Введите логин:")
-        val login = readLine()
-        val userlogin = usersTable.keys.contains(login)
-        while (!userlogin) {
-            println("Такого пользователя не существует. Введите логин еще раз:")
-            val login = readLine()
-            val userlogin = usersTable.keys.contains(login)
-            if (userlogin) break
-        }
-            println("введите пароль для :")
-            val pasword = readLine()
-            if (usersTable[login] != pasword)
-                println("Указан неверный логин или пароль».")
-            else
-                    println("Добро пожаловать ${login}")
-
+    println("Введите логин:")
+    var login = readLine()
+    usersTable.keys.contains(login)
+    while (!usersTable.keys.contains(login)) {
+        println("Такого пользователя не существует.  Введите логин еще раз:")
+        login = readLine()
+        if (usersTable.keys.contains(login)) break
     }
+        println("введите пароль для ${login}:")
+        val pasword = readLine()
+        if (usersTable[login] != pasword)
+            println("Указан неверный логин или пароль».")
+        else
+            println("Добро пожаловать ${login}")
+    }
+
+
+
 
 
 
