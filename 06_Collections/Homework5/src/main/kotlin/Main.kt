@@ -1,4 +1,5 @@
 import kotlin.random.Random
+
 fun main() {
 
 //    println("Введите число ... ")
@@ -18,7 +19,7 @@ fun checkNumberN() {
         println("Вы ввели некорректное число, попробуйте снова.")
         return checkNumberN()
     }
-    val list = List(numberN){ Random.nextInt(-5, 5) }
+    val list = List(numberN) { Random.nextInt(-5, 5) }
     val mutableList = list.toMutableList()
     for (i in mutableList.indices) {
         if (i % 2 == 0)
@@ -63,13 +64,13 @@ fun userRegistration() {
         login = readLine()
         if (usersTable.keys.contains(login)) break
     }
-        println("введите пароль для ${login}:")
-        val pasword = readLine()
-        if (usersTable[login] != pasword)
-            println("Указан неверный логин или пароль».")
-        else
-            println("Добро пожаловать ${login}")
-    }
+    println("введите пароль для $login:")
+    val pasword = readLine()
+    if (usersTable[login] != pasword)
+        println("Указан неверный логин или пароль».")
+    else
+        println("Добро пожаловать ${login}")
+}
 
 
 
