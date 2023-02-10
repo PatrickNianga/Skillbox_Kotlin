@@ -1,5 +1,5 @@
-import jdk.jfr.Description
 
+import kotlin.random.Random
 class TVs(val brand: String, val model: String, val diagonal: Int) {
 
     private var power = true

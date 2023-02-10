@@ -1,3 +1,5 @@
+
+import kotlin.random.Random
 fun main() {
     val samsung = TVs(brand = "Samsung", model = "s30", diagonal = 30)
     samsung.powerOff()
