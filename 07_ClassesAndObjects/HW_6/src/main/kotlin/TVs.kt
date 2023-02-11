@@ -1,5 +1,5 @@
 
-import kotlin.random.Random
+
 class TVs(val brand: String, val model: String, val diagonal: Int) {
 
     private var power = true
@@ -33,8 +33,8 @@ class TVs(val brand: String, val model: String, val diagonal: Int) {
 //    }
 
     fun nextChannel() {
-        do {currentChannel += 1
-        } while (currentChannel > channelList.lastIndex)
+        currentChannel += 1
+        if (currentChannel > channelList.lastIndex)
             currentChannel = 0
         println("${currentChannel} - ${channelList[currentChannel]}")
 

@@ -1,7 +1,5 @@
 
-
 import kotlin.random.Random
-
 object Channels {
 
     var channelList = listOf(
@@ -12,7 +10,7 @@ object Channels {
         "ТНТ", "MTv")
 
     fun addChannel() {
-val randomChannelList = channelList.take()
+val randomChannelList = channelList
 
     }
 
