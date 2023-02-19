@@ -1,4 +1,4 @@
-class Caw(
+class Cat(
     energy: Int, weight: Int,
     currentAge: Int, maxAge: Int,
     name: String

@@ -7,13 +7,13 @@ open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxA
         return true
     }
 
-    fun sleep() {
+    open fun sleep() {
         energy += 5
         curentAge += 1
         println("$name спит")
     }
 
-    fun eat() {
+    open fun eat() {
         energy += 3
         weight += 1
         tryIncrementAge(curentAge)
@@ -34,13 +34,13 @@ open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxA
     }
 
 //    open fun nextGen(): Animal {
-//            energy = (1..10).random()
-//            weight = (1..5).random()
-//            maxAge
-//            name
+//        energy = (1..10).random()
+//        weight = (1..5).random()
+//        maxAge
+//        name
 //        println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
-//        return Animal( name, energy, weight, maxAge )
-
+//        return Animal(energy, weight, maxAge, name)
+//    }
 
 
 }
