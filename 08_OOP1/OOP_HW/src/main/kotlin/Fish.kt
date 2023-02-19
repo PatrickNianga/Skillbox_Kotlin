@@ -12,6 +12,6 @@ class Fish(
         energy -= 5
         weight -= 1
         tryIncrementAge(curentAge)
-        println(" $name плявет")
+        println("$name плывет")
     }
 }

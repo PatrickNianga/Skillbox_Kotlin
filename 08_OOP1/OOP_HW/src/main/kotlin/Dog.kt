@@ -12,7 +12,7 @@ class Dog(
         energy -= 5
         weight -= 1
         tryIncrementAge(curentAge)
-        println(" $name бежит")
+        println("$name бежит")
     }
 
 

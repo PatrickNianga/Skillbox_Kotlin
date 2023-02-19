@@ -16,15 +16,16 @@ class Bird(
 
     }
 
-//    override fun nextGen(): Bird {
-//        energy = (1..10).random()
-//        weight = (1..5).random()
-//        name
-//        maxAge
-//        curentAge = 0
-//        println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
-//        return Bird(energy, weight, maxAge, name )
+    override fun nextGen(): Bird {
+        energy = (1..10).random()
+        weight = (1..5).random()
+        name
+        maxAge
+        curentAge = 0
+        println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
+        return Bird(energy, weight, maxAge, name )
     }
+}
 
 
 

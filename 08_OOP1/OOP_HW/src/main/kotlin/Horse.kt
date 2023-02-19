@@ -17,13 +17,13 @@ class Horse(
         energy += 23
         weight += 5
         tryIncrementAge(curentAge)
-        println(" $name ест")
+        println("$name ест")
     }
 
     override fun move() {
         energy -= 20
         weight -= 8
         tryIncrementAge(curentAge)
-        println(" $name скачет")
+        println("$name скачет")
     }
 }

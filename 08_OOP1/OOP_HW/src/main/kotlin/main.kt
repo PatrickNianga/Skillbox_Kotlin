@@ -1,12 +1,9 @@
 fun main(){
 
-    val cat = Animal(energy = 10, weight = 5, curentAge = 3, maxAge = 12, name = "Vasya")
+    val dd = NatureReserve()
+    println( "${dd.lifeAction()}")
 
-    cat.isTooOld()
-    cat.sleep()
-    cat.eat()
-    cat.move()
-    cat.nextGen()
+
 
 
 }

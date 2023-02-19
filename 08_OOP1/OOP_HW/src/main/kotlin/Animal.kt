@@ -2,7 +2,7 @@ import kotlin.random.Random
 
 open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxAge: Int, var name: String) {
 
-    fun isTooOld(): Boolean {
+     fun isTooOld(): Boolean {
         curentAge >= maxAge
         return true
     }
@@ -17,14 +17,14 @@ open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxA
         energy += 3
         weight += 1
         tryIncrementAge(curentAge)
-        println(" $name ест")
+        println("$name ест")
     }
 
     open fun move() {
         energy -= 5
         weight -= 1
         tryIncrementAge(curentAge)
-        println(" $name двигается")
+        println("$name двигается")
     }
 
     fun tryIncrementAge(curenrAge: Int): Int {
@@ -33,14 +33,14 @@ open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxA
         return curenrAge
     }
 
-//    open fun nextGen(): Animal {
-//        energy = (1..10).random()
-//        weight = (1..5).random()
-//        maxAge
-//        name
-//        println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
-//        return Animal(energy, weight, maxAge, name)
-//    }
+    open fun nextGen(): Animal {
+        energy = (1..10).random()
+        weight = (1..5).random()
+        maxAge
+        name
+        println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
+        return Animal(energy, weight, maxAge, name)
+    }
 
 
 }
