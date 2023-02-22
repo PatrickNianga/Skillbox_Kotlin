@@ -17,16 +17,21 @@ class NatureReserve {
     )
 
     fun lifeAction() {
-        zooList.forEach {
-            when ((1..5).random()) {
-                1 -> it.move()
-                2 -> it.sleep()
-                3 -> it.eat()
-                4 -> zooList.add(it.nextGen())
-                5 -> zooList.removeIf{it.isTooOld()}
+        var j = zooList.size
+        for (i in 0..zooList.size) {
+            when((1..5).random()) {
+                1 -> zooList[i].move()
+                2 -> zooList[i].sleep()
+                3 -> zooList[i].eat()
+                4 -> zooList.add(zooList[i].nextGen())
+                5 -> {
+                    if (zooList[i].isTooOld()) {
+                        zooList.removeAt(i)
+                        j = zooList.size
+                    }
+                }
             }
         }
-        println("В заповеднике проживает ${zooList.size} животных")
+        println("В заповеднике проживает $j животных")
     }
-
 }
