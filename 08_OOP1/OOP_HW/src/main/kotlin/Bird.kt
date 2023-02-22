@@ -12,7 +12,7 @@ class Bird(
         energy -= 5
         weight -= 1
         tryIncrementAge(curentAge)
-        println(" $name летит")
+        println("$name летит")
 
     }
 
@@ -23,7 +23,7 @@ class Bird(
         maxAge
         curentAge = 0
         println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
-        return Bird(energy, weight, maxAge, name )
+        return Bird(energy, weight, maxAge, curentAge, name )
     }
 }
 

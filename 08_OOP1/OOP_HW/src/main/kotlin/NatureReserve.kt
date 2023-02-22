@@ -23,7 +23,7 @@ class NatureReserve {
                 2 -> it.sleep()
                 3 -> it.eat()
                 4 -> zooList.add(it.nextGen())
-                5 -> zooList.removeIf(it.isTooOld())
+                5 -> zooList.removeIf{it.isTooOld()}
             }
         }
         println("В заповеднике проживает ${zooList.size} животных")

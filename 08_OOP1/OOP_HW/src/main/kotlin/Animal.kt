@@ -2,7 +2,7 @@ import kotlin.random.Random
 
 open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxAge: Int, var name: String) {
 
-     fun isTooOld(): Boolean {
+    fun isTooOld(): Boolean {
         curentAge >= maxAge
         return true
     }
@@ -38,9 +38,10 @@ open class Animal(var energy: Int, var weight: Int, var curentAge: Int, var maxA
         weight = (1..5).random()
         maxAge
         name
+        curentAge = 0
         println("Родился: $name \nВес: $weight \nЭнергия: $energy ")
-        return Animal(energy, weight, maxAge, name)
+        return Animal(energy, weight, maxAge, curentAge, name)
+
+
     }
-
-
 }
