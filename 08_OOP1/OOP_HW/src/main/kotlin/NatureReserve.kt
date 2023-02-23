@@ -15,23 +15,31 @@ class NatureReserve {
         Cat(name = "Котик", energy = 200, weight = 7, currentAge = 4, maxAge = 13),
         Animal(name = "Слон", energy = 1, weight = 300, curentAge = 20, maxAge = 85)
     )
-
-    fun lifeAction() {
-        var j = zooList.size
-        for (i in 0..zooList.size) {
-            when((1..5).random()) {
-                1 -> zooList[i].move()
-                2 -> zooList[i].sleep()
-                3 -> zooList[i].eat()
-                4 -> zooList.add(zooList[i].nextGen())
-                5 -> {
-                    if (zooList[i].isTooOld()) {
-                        zooList.removeAt(i)
-                        j = zooList.size
-                    }
+    var newBornAnimal = mutableListOf<Animal>()
+    var retiredAnimals = mutableListOf<Animal>()
+    fun lifeAction(numberOfCycles: Int) {
+        for (numberIteration in 1..numberOfCycles) {
+            for (animal in zooList) {
+                when ((1..5).random()) {
+                    1 -> animal.move()
+                    2 -> animal.sleep()
+                    3 -> animal.eat()
+                    4 -> newBornAnimal.add(animal.nextGen())
+                    5 -> if (animal.isTooOld())
+                        retiredAnimals.add(animal)
                 }
             }
+
         }
-        println("В заповеднике проживает $j животных")
+        zooList.removeAll(retiredAnimals)
+        zooList.addAll(newBornAnimal)
+        println("В заповеднике проживает ${zooList.size} животных")
     }
+
+
 }
+
+
+
+
+

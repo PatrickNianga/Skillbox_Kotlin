@@ -1,7 +1,7 @@
 fun main(){
 
     val dd = NatureReserve()
-    println( "${dd.lifeAction()}")
+    println( "${dd.lifeAction(130)}")
 
 
 
