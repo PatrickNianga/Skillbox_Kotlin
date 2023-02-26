@@ -3,7 +3,7 @@ open class CreditCard(
 ) :
     BankCard(balance) {
 
-    private var creditLimit = balance
+    private val creditLimit = balance
     private var creditMoney = 4000.0
     private var ownMoney = 2000.0
 
