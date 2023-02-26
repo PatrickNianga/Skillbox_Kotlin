@@ -12,29 +12,32 @@ open class CreditCard(
         if (creditMoney >= balance) {
             ownMoney += cash
         } else {
-            var different = (creditLimit - creditMoney)
+            val different = (creditLimit - creditMoney)
             ownMoney += cash - different
             creditMoney += different
+        }
+        println("Карта пополнена на $cash")
+    }
+
+    override fun payment(pay: Double): Boolean {
+        return if (creditMoney + ownMoney - pay >= 0) {
+            if (ownMoney > pay)
+                ownMoney -= pay
+            else
+                creditMoney -= pay - ownMoney
+            ownMoney -= ownMoney
+            println("Списанно $pay")
+            true
+        } else {
+            println("Недостаточно средств")
+            false
         }
 
     }
 
-    override fun payment(pay: Double): Boolean {
-        if (ownMoney >= pay) {
-            ownMoney -= pay
-            println("Списанно $pay")
-        } else if (ownMoney < pay) {
-            creditMoney -= pay - ownMoney
-            ownMoney -= ownMoney
-            println("Списанно $pay")
-            return true
-        } else
-            println("Недостаточно средств.")
-        return false
-    }
 
-
-    override fun getInfoBalance() =
+    override fun getInfoBalance() {
         println("Баланс карты равен ${balance} \nКредитных средств $creditMoney \nСобственные средства $ownMoney")
+    }
 }
 
